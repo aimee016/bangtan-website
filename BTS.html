@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>BTS Menu Page</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control=public" name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0" , user-scalable="yes">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Six Caps' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Josefin Slab' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="BangtanPageStyle.css">
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+  <style>
+    body {
+      font-family: 'Six Caps';
+      font-size: 50px;
+    }
+
+    h1 {
+      font-family: 'Josefin Slab';
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: text-top;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="icon-bar">
+    <a href="JK.html"><i class="fa fa-arrow-circle-left"></i></a>
+    <a href="gallery.html"><i class="fa fa-home"></i></a>
+  </div>
+
+  <audio controls loop autoplay id="Audio">
+    <source src="Baepsae.ogg" type="audio/ogg">
+    <source src="Baepsae.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <p id="demo"></p>
+
+
+  <h1>WELCOME ARMYS</h1>
+
+
+  <div class="row">
+
+    <div class="zoom responsive">
+      <div class="gallery">
+        <a href="timeline.html">
+          <img src="BANGTAN.jpg" alt="BTS" width="600" height="400">
+        </a>
+        <div class="desc">HISTORY AND SOCIAL MEDIA</div>
+      </div>
+    </div>
+    <!--</div> unnecessary!-->
+
+    <div class="zoom responsive">
+      <div class="gallery">
+        <a href="awards.html">
+          <img src="award.jpg" alt="BTS AMAs" width="600" height="400">
+        </a>
+        <div class="desc">AWARDS</div>
+      </div>
+    </div>
+    <!--</div> unnecessary!-->
+
+    <div class="zoom responsive">
+      <div class="gallery">
+        <a href="songs.html">
+          <img src="Butter_Cover.jpg" alt="Butter Album" width="600" height="400">
+        </a>
+        <div class="desc">SONGS AND ALBUMS</div>
+      </div>
+    </div>
+    <!--</div> unnecessary!-->
+
+    <div class="zoom responsive">
+      <div class="gallery">
+        <a href="mvs.html">
+          <img src="pics-and-media.jpg" alt="BTS Weverse Magazine" width="600" height="400">
+        </a>
+        <div class="desc">PHOTOS AND MEDIA</div>
+      </div>
+    </div>
+    <!--</div> unnecessary!-->
+
+  </div>
+  <script>
+    window.addEventListener('click', () => {
+      document.getElementById("Audio").play();
+    });
+
+
+    function myFunction() {
+      var x = document.getElementById("Audio").loop;
+      document.getElementById("demo").innerHTML = x;
+    }
+
+    var audio = document.getElementById("Audio");
+    audio.volume = 0.2;
+
+
+  </script>
+
+  <script
+    type="text/javascript">(function () { window['__CF$cv$params'] = { r: '6dab4fd14e198e45', m: 'egNrmm0kVqQgqOG2CfH2sMUvnZ55cd092tuw8aA9GL0-1644390981-0-Aex4ECTkUPyPqT3gTNnsynrIVa7732LCY7cuDlDjkjO0QOGUVRrejnGKpeEQ0uvwO/7J1A54SZ5A0CZPbRrsq+X5iFEP3Ct1zzr/iJGpBNeNftOtxh25eaKCSWmpiWGlhZnNksnXVQMq2M9/nn6XgwFuP4VsifND5JVZja0ob1Y9Dm3Tln8r4niRjn9zz4/bNg==', s: [0xa8f65dc841, 0x4b342f1c99], } })();</script>
+  <script
+    type="text/javascript">(function () { window['__CF$cv$params'] = { r: '6dac873fefb5463d', m: '774sjfX7AhgDN.9MCTbqUFga2lcAE9gAWaIt1DHS03E-1644403738-0-AUcXUET07TR5VWJ+RA3CHiys6SxrwSG86VgxO7/tZlO9UJGn0lSU6JNymsmI8jAJ0hAQTVkBZheMsORyKnC4Cd03tQHCmQrfrNjr4U0QiXVCBG8KG5swk88H09lHCljdqe/J+bLMlZDJlqpLRT0hUEDyNVm/lgc4dYP2e9GRKZ2n6V57xZ2/QSsOdUXy7YsBHB2kli87EiM6/UNhXtcmNdo=', s: [0x3d58adf7fb, 0xdf3ca89a8a], } })();</script>
+</body>
+
+</html>

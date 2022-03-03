@@ -1,0 +1,93 @@
+body {
+background-color: #FDF5E6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.13); /* IE 9 */
+  -webkit-transform: scale(1.13); /* Safari 3-8 */
+  transform: scale(1.13); 
+}
+
+div.gallery {
+  border: 5px solid #999999;
+  border-radius: 20px;
+  margin-top: 25px;
+  height: auto;
+  width: 100%;
+}
+
+div.gallery:hover {
+  border: 5px solid #000000;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 10px;
+  /*float: left;*/
+  display: inline-flex; /*added, to make in next to each other*/
+  width: 24.5%;
+}
+
+/*added, to make div height equal*/
+.row {
+  display: flex; /* equal height of the children */
+  width: 100%;
+  flex-direction : row;
+}
+
+/*removed (max-height:1050px ) to make it work with only width, didn't work well with both conditions*/
+@media only screen and (max-width: 700px) {
+  .responsive {
+    /*width: 49.5%;*/ 
+    width: 100%;    /*from below (double)*/
+    margin: 10px 0;
+  }
+
+  /*added, to make each div as row in small device*/
+  .row {
+    flex-direction : column;
+  }
+
+  /*added, to make audio size change on small device*/
+  audio{
+    width: 100%;
+  }
+}
+
+/*double, no need*/
+/*
+@media only screen and (max-height: 1050px) and (max-width: 900px) {
+  .responsive {
+    width: 100%;
+  }
+}*/
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
