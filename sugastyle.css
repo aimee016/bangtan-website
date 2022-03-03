@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #F1E9D2;
+  margin: 0;
+}
+
+.icon-bar {
+  height: 40px;
+  width: 100%;
+  background-color: #555;
+  overflow: hidden;
+}
+
+.icon-bar a {
+  float: left;
+  margin-top: 3.5px;
+  width: 10%;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 30px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+figure
+  {
+  display: inline-block;
+  vertical-align: text-top;
+  padding: 4px;
+  margin:auto;
+}
+
+figcaption{
+  font-size: large;
+  font-weight: 50;
+  text-align: center;
+}
+
+img{
+  width: 75%;
+  border: 10px solid #999999; 
+  border-radius: 20px;
+  margin-left: 45px;
+  text-align: center;
+}
+
+span{
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.left {
+    display: inline-block;
+    position: absolute;
+    top: 300px;
+    left: 80px;
+    width: 600px;
+}
+
+p{
+  clear: left;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 15px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer{
+  height: 100px;
+  background-color: #f1f1f1;
+}
+
+.social ul{
+  position: absolute;
+  left: 50%;
+  bottom: -120%;
+  padding: 0;
+  margin: 0;
+  transform: translate(-50%, -50% );
+  display: flex;
+}
+
+.social ul li{
+    list-style: none;
+    margin: 0 15px; 
+}
+
+.social ul li a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: 0.6s;
+    box-shadow: 0 10px 15px rgba(0,0,0.5);
+}
+
+.social ul li a:hover{
+  transform: translate(0, -10px);
+}
+
+.social ul li .fa{
+    font-size: 30px;
+    line-height: 50px;
+    transition: 0.5s;
+    color: #000;
+}
+
+.social ul li .fa:hover{
+    color: #fff;
+}
+
+.social ul li:nth-child(1) a:hover{
+    background-color: #f55182bb;
+}
+
+.social ul li:nth-child(2) a:hover{
+    background-color: #18bb41bb;
+}
+
+@media only screen and (min-width:300px) and (max-width: 1300px){
+  audio{
+    margin-top: 5%;
+    margin-left: 13%;
+  }
+  .column {
+    width: 100%;
+  }
+
+  .body{
+      min-width: 300px;
+      min-height: 570px;
+  }
+  
+  figure{
+    text-align: center;
+    display: inline-block;
+    vertical-align: text-top;
+    padding: 4px;
+  }
+  figure a img{
+    margin-top: 5%;
+    margin-left: 1%;
+  }
+  figure figcaption{
+    font-size: 20px;
+    font-weight: 50;
+    text-align: center;
+  }
+
+  footer {
+    justify-content: center;
+    background-color: #f1f1f1;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .social {
+    position: relative;
+  }
+
+  .social ul{
+    justify-content: center;
+    position: relative;
+    top: 40px;
+  }
+}

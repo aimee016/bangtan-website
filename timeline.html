@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>History and Social Media</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control=public" name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0" , user-scalable="yes">
+    <link rel="stylesheet" type="text/css" href="TimelineStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+  <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script>
+  <style>
+    .r-title {
+      margin-top: var(--rTitleMarginTop, 0) !important;
+      margin-bottom: var(--rTitleMarginBottom, 0) !important;
+    }
+
+    p:not([class]) {
+      line-height: var(--cssTypographyLineHeight, 1.78);
+      margin-top: var(--cssTypographyBasicMargin, 1em);
+      margin-bottom: 0;
+    }
+
+    p:not([class]):first-child {
+      margin-top: 0;
+    }
+
+    .text {
+      display: var(--textDisplay, inline-flex);
+      font-size: var(--textFontSize, 1rem);
+    }
+
+    .time {
+      display: var(--timeDisplay, inline-flex);
+    }
+
+    .time__month {
+      margin-left: var(--timelineMounthMarginLeft, .25em);
+    }
+
+    .time {
+      padding: var(--timePadding, .25rem 1.25rem .25rem);
+      background-color: var(--timeBackgroundColor, #f0f0f0);
+
+      font-size: var(--timeFontSize, .75rem);
+      font-weight: var(--timeFontWeight, 700);
+      text-transform: var(--timeTextTransform, uppercase);
+      color: var(--timeColor, currentColor);
+    }
+
+    .card {
+      padding: var(--timelineCardPadding, 1.5rem 1.5rem 1.25rem);
+    }
+
+    .card__content {
+      margin-top: var(--cardContentMarginTop, .5rem);
+    }
+
+    .card {
+      border-radius: var(--timelineCardBorderRadius, 2px);
+      border-left: var(--timelineCardBorderLeftWidth, 3px) solid var(--timelineCardBorderLeftColor, var(--uiTimelineMainColor));
+      box-shadow: var(--timelineCardBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+      background-color: var(--timelineCardBackgroundColor, #fff);
+    }
+
+    .timeline {
+      display: var(--timelineDisplay, grid);
+      grid-row-gap: var(--timelineGroupsGap, 2rem);
+    }
+
+    .timeline__year {
+      margin-bottom: 1.25rem;
+      /* 1 */
+    }
+
+    .timeline__cards {
+      display: var(--timeloneCardsDisplay, grid);
+      grid-row-gap: var(--timeloneCardsGap, 1.5rem);
+    }
+
+    .timeline {
+      --uiTimelineMainColor: var(--timelineMainColor, #222);
+      --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+
+      border-left: var(--timelineLineWidth, 3px) solid var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
+      padding-top: 1rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .timeline__year {
+      --timePadding: var(--timelineYearPadding, .5rem 1.5rem);
+      --timeColor: var(--uiTimelineSecondaryColor);
+      --timeBackgroundColor: var(--uiTimelineMainColor);
+      --timeFontWeight: var(--timelineYearFontWeight, 400);
+    }
+
+    .timeline__card {
+      position: relative;
+      margin-left: var(--timelineCardLineGap, 1rem);
+    }
+
+    .timeline__cards {
+      overflow: hidden;
+      padding-top: .25rem;
+      /* 1 */
+      padding-bottom: .25rem;
+      /* 1 */
+    }
+
+    .timeline__card::before {
+      content: "";
+      width: 100%;
+      height: var(--timelineCardLineWidth, 2px);
+      background-color: var(--timelineCardLineBackgroundColor, var(--uiTimelineMainColor));
+
+      position: absolute;
+      top: var(--timelineCardLineTop, 1rem);
+      left: -50%;
+      z-index: -1;
+    }
+
+    .timeline {
+      --timelineMainColor: #4557bb;
+    }
+
+    /*
+=====
+DEMO
+=====
+*/
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+      color: #222;
+
+      background-color: #FFFDD0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .page {
+      max-width: 47rem;
+      padding: 5rem 2rem 3rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .substack {
+      border: 1px solid #EEE;
+      background-color: #fff;
+      width: 100%;
+      max-width: 480px;
+      height: 280px;
+      margin: 1rem auto;
+      ;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="icon-bar">
+    <a href="BTS.html"><i class="fa fa-home"></i></a>
+    <a href="awards.html"><i class="fa fa-arrow-circle-right"></i></a>
+  </div>
+
+  <audio controls loop autoplay id="Audio">
+    <source src="BTS-Idol.ogg" type="audio/ogg">
+    <source src="BTS-Idol.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <p id="demo"></p>
+
+  <div class="page">
+    <h2>BTS (Korean: 방탄소년단; RR: Bangtan Sonyeondan)</h2>
+    <div class="timeline">
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">2013</span>
+        <div class="timeline__cards">
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2013-06-12">
+                <span class="time__day">12</span>
+                <span class="time__month">June</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Released their debut single <i>2 Kool 4 Skool</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2013-09-11">
+                <span class="time__day">11</span>
+                <span class="time__month">Sept</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their first mini album, an extended play titled <i>O!RUL8,2?</i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">2014</span>
+        <div class="timeline__cards">
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2014-02-12">
+                <span class="time__day">12</span>
+                <span class="time__month">Feb</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released an EP titled <i>Skool Luv Affair</i> as the final part of their school trilogy.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2014-08-20">
+                <span class="time__day">20</span>
+                <span class="time__month">Aug</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their first studio album titled <i>Dark & Wild</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2014-12-24">
+                <span class="time__day">24</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their first Japanese studio album titled <i>Wake Up</i>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">2015</span>
+        <div class="timeline__cards">
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2008-02-10">
+                <span class="time__day">10</span>
+                <span class="time__month">Feb</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They toured Japan for 9 days with their first Japan tour - Wake Up: Open Your Eyes. </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2015-04-29">
+                <span class="time__day">29</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their third EP titled <i>The Most Beautiful Moment in Life Part 1.</i></p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2015-06-17">
+                <span class="time__day">17</span>
+                <span class="time__month">June</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their fourth Japanese single titled <i>For You</i> to celebrate the first anniversary of
+                their
+                Japanese debut.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2015-11-27">
+                <span class="time__day">27</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They performed the song <i>Run</i>, their lead single for the EP "The Most Beautiful Moment in Life
+                Part 2 at
+                their 3-day concert <i>The Most Beautiful Moment in Life: On Stage tour.</i></p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2015-11-30">
+                <span class="time__day">30</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their fourth EP titled <i>The Most Beautiful Moment in Life Part 2</i>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">2016</span>
+        <div class="timeline__cards">
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2016-05-02">
+                <span class="time__day">02</span>
+                <span class="time__month">May</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They combined the two previous EPs into their first Korean-language compilation album titled <i>The
+                  Most Beautiful Moment in Life: Young Forever</i> with three additional singles: <i>Fire, Save Me, and
+                  Epilogue: Young Forever.</i></p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2016-09-07">
+                <span class="time__day">09</span>
+                <span class="time__month">Sept</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their second Japanese studio album titled <i>Youth</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2016-10-10">
+                <span class="time__day">10</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their second Korean studio album titled <i>Wings</i>. Within a week of its release, the
+                demand for
+                their pre-orders accumulated to around 500,000 copies.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2016-11-19">
+                <span class="time__day">19</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They won their first daesang (major grand prize) at the <i>Melon Music Awards</i> for <i>Album of the
+                  Year</i>
+                for their compilation album <i>The Most Beautiful Moment in Life: Young Forever.</i></p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2016-12-02">
+                <span class="time__day">02</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They won <i>Artist of the Year</i> at the <i>Mnet Asian Music Awards</i>, becoming the first artist not
+                from the
+                3 major entertainment companies (SM,JYP,YG) to receive it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">2017</span>
+        <div class="timeline__cards">
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-02-13">
+                <span class="time__day">13</span>
+                <span class="time__month">Feb</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their re-packaged edition of Wings titled <i>You Never Walk Alone</i>. The pre-orders for
+                the said album reached over 700,000 copies.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-02-18">
+                <span class="time__day">18</span>
+                <span class="time__month">Feb</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They started their concert tour titled <i>BTS Live Trilogy Episode III: The Wings Tour</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-05-21">
+                <span class="time__day">21</span>
+                <span class="time__month">May</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They won <i>Top Social Artist</i> at the Billboard Music Awards, becoming the first Korean act to
+                receive said
+                award.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-07-15">
+                <span class="time__day">15</span>
+                <span class="time__month">July</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Big Hit and BTS revealed a new logo for the band in a video released in their official YouTube channel.
+                They also
+                announced that in additon to being known as <i>Bangtan Sonyeondan</i>(translated as Bulletproof
+                Boyscouts), it
+                will also stand for <i>Beyond the Scene</i> as part of their new brand identity.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-09-18">
+                <span class="time__day">18</span>
+                <span class="time__month">Sept</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released their fifth EP titled <i>Love Yourself: Her</i> featuring a track titled <i>Best of Me</i>
+                with
+                music from The Chainsmokers' Andrew Taggart.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-09-18">
+                <span class="time__day">19</span>
+                <span class="time__month">Sept</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Their lead single for the album <i>Love Yourself: Her</i> titled <i>DNA</i>'s music video reached over
+                20 million
+                views, breaking the record for the most viewed K-pop group music videos within 24 hours.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-11-19">
+                <span class="time__day">19</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS performed at the American Music Awards, becoming the first K-pop group to do so.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-11-22">
+                <span class="time__day">22</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Guinness World Records announced that BTS will be included in the 2018 edition of Guinness Book of
+                World Records
+                specifically for <i>World's Most Twitter Engagements</i> and <i>Most Twitter Engagements by a Music
+                  Group</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-11-24">
+                <span class="time__day">24</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>The remix of <i>Mic Drop</i> featuring Steve Aoki & Desiigner peaked at 23 in South Korea, and 28 on
+                the
+                <i>Billboard Hot 100</i> upon release, becoming the first top 40 entry for a K-pop group on the chart.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-12-01">
+                <span class="time__day">01</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS won <i>Artist of the Year</i> once again at the <i>Mnet Asian Music Awards</i>, the first act to
+                win twice in
+                a row.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-12-05">
+                <span class="time__day">05</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Twitter named BTS as the most tweeted-about artist of 2017, and ranked 1st worldwide in yearly social
+                media
+                engagements with 502 million likes and retweets.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-12-12">
+                <span class="time__day">12</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS was represented on six of the Billboard <i>Year End</i> charts. Ranking 1st on the <i>World Albums
+                  Artists</i> chart, 2nd on the <i>World Albums</i> chart, 1st on the <i>Social 50 Artists</i> chart,
+                2nd on the
+                <i>Top Artists-Duo/Group</i> chart, 32nd on the <i>Independent Albums</i> chart, and 10th on the <i>Top
+                  Artists</i> chart, making them the only K-pop artist to have made the list.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-12-22">
+                <span class="time__day">22</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS made their Japanese TV music show debut on <i>TV Asahi</i>'s <i>Japan Music Station Super Live</i>.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2017-12-31">
+                <span class="time__day">31</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS performed on <i>Dick Clark's New Year's Rockin' Eve</i>, becoming the first K-pop group to be part
+                of the
+                show's line-up.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">2018</span>
+        <div class="timeline__cards">
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-01-11">
+                <span class="time__day">11</span>
+                <span class="time__month">Jan</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS became the first artist to win both <i>Daesang</i> awards at the <i>Golden Disc Awards</i> and
+                <i>Seoul Music Awards</i> outside of the 3 major entertainment companies (SM,JYP,YG).
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-01-15">
+                <span class="time__day">15</span>
+                <span class="time__month">Jan</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>The <i>Recording Industry Association of Japan</i> announced BTS' first ever <i>Double Platinum</i>
+                certification
+                on the <i>Oricon Chart</i> that year. It is also the only single album by a foreign artist in 2017 to
+                sell over
+                500,000 copies and receive certification from the <i>Oricon Chart</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-02-11">
+                <span class="time__day">11</span>
+                <span class="time__month">Feb</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Sales for the album <i>Love Yourself: Her</i> surpassed 1.58 million, the highest sales recorded for an
+                album in
+                <i>Gaon</i> chart history.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-02-22">
+                <span class="time__day">22</span>
+                <span class="time__month">Feb</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p> Suga's mixtape <i>Agust D</i> was released on Spotify and iTunes for the first time in over 2 years
+                siince the
+                original release. Within 24 hours, the album reached #1 on the worldwide iTunes chart & the iTunes Pop
+                charts.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-02-28">
+                <span class="time__day">28</span>
+                <span class="time__month">Feb</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Suga's mixtape debuted at #3 on the <i>Billboard World Albums chart</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-03-02">
+                <span class="time__day">02</span>
+                <span class="time__month">March</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>J-Hope released his first solo mixtape titled <i>Hope World</i> for free download on Google Drive,
+                streaming on
+                Spotify and Soundcloud, and for purchase on iTunes. At the end of the day, the mixtape tied up with
+                their album
+                <i>Love Yourself: Her</i> for the most #1 spots held by a Korean album on iTunes within the first 24
+                hours, with
+                73 #1 spots on the iTunes chart worldwide.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-03-05">
+                <span class="time__day">05</span>
+                <span class="time__month">March</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>The mixtape <i>Hope World</i> remained #1 on the <i>iTunes worldwide Chart</i>, beating their album
+                <i>Love
+                  Yourself: Her</i> for the longest charting Korean album.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-03-06">
+                <span class="time__day">06</span>
+                <span class="time__month">March</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS' music video <i>DNA</i> reached 300 million views, making it one of the fastest K-pop videos to
+                reach the
+                benchmark. The video reached 300 million views in 5 months & 16 days, beating the song <i>TT</i> by
+                <i>Twice</i>,
+                reaching 300 million views at 13 months and 28 days.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-03-13">
+                <span class="time__day">13</span>
+                <span class="time__month">March</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Big Hit announced an original documentary series for BTS titled <i>Burn The Stage</i> to premiere
+                exclusively on
+                YouTube Red (now called YouTube Premium) on March 28-May 9.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-04-04">
+                <span class="time__day">04</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released their third Japanese studio album titled <i>Face Yourself</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-04-05">
+                <span class="time__day">05</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Big Hit released a video titled <i>Euphoria: Theme of Love Yourself Wonder</i> on their official
+                YouTube channel.
+                The clip appears to dub the band's upcoming album for the <i>Love Yourself</i> series.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-04-14">
+                <span class="time__day">14</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Big Hit announced BTS' new album titled <i>Love Yourself: Tear</i> with a release date of May 18.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-04-17">
+                <span class="time__day">17</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS once again is nominated for <i>Top Social Artist</i>, making them the first and only Korean artist
+                to be
+                nominated twice in a row at the <i>Billboard Music Awards</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-04-24">
+                <span class="time__day">24</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS' new album <i>Love Yourself: Tear</i> reached 1,449,287 stock pre-orders, international retailers
+                not
+                included, thus setting a new record according to <i>iriver</i>, the company handling the distribution of
+                the new
+                album.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-04-26">
+                <span class="time__day">26</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS' <i>World Tour: Love Yourself</i> was announced to begin at August 25.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-05-06">
+                <span class="time__day">06</span>
+                <span class="time__month">May</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released a video titled <i>Love Yourself: Tear SINGULARITY Comeback Trailer</i>. Within an hour and
+                29
+                minutes, the music video reached 1 million likes on YouTube, the fastest BTS video to reach this
+                milestone,
+                breaking the record set by their video <i>DNA</i> of 8 hours.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-05-18">
+                <span class="time__day">18</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Their album <i>Love Yourself: Tear</i> was released worldwide along with a music video for their title
+                track
+                <i>Fake Love</i> and broke the previous record of <i>Intro: Singularity</i> for the fastest music video
+                to reach 1
+                million likes, reaching the milestone in 39 minutes.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-05-20">
+                <span class="time__day">20</span>
+                <span class="time__month">May</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS performed <i>Fake Love</i> for the first time at the <i>Billboard Music Awards</i> and won <i>Top
+                  Social
+                  Artist</i> with 94% of the fan vote.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-05-21">
+                <span class="time__day">21</span>
+                <span class="time__month">May</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p><i>Fake Love</i> achieved the group's first <i>Perfect-All-Kill</i> (also known as PAK, it means that
+                the song is
+                in 1st place on the six major and realtime charts: <i>Melon, Genie, Mnet, Naver and Soribada</i>, as
+                well as first
+                place on realtime and weekly charts like <i>Instiz's iChart</i>).</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-05-27">
+                <span class="time__day">27</span>
+                <span class="time__month">May</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS became the first K-pop act in history to top the <i>Billboard 200</i> as their album <i>Love
+                  Yourself:
+                  Tear</i> opened at #1, becoming BTS' highest-charting and the first #1 album in the US, the first
+                K-pop album to
+                top the US charts and the highest charting album by an Asian act.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-07-17">
+                <span class="time__day">17</span>
+                <span class="time__month">July</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS announced their second compilation album titled <i>Love Yourself:Answer</i> with seven new
+                additional tracks
+                to be released on August 24.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-07-18">
+                <span class="time__day">18</span>
+                <span class="time__month">July</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS started their world tour titled <i>BTS World Tour: Love Yourself</i> in Seoul. They also announced
+                that the
+                band will perform at CitiField, marking the first time a Korean act has performed at a US stadium. It
+                was later
+                confirmed that all 40,000 tickets were sold out within 20 minutes.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-08-24">
+                <span class="time__day">24</span>
+                <span class="time__month">Aug</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Their new album titled <i>Love Yourself: Answer</i> with a music video for their title track
+                <i>IDOL</i> as well
+                as an alternative version of the track featuring Nicki Minaj, debuting at #1 on <i>Billboard 200</i>,
+                becoming the
+                2nd and their highest sales to date. This makes BTS the only K-pop act and pop act with two #1 albums in
+                less than
+                a year since One Direction.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-09-24">
+                <span class="time__day">24</span>
+                <span class="time__month">Sept</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS attended the <i>73rd United Nations General Assembly</i> where RM gave a speech.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-10-14">
+                <span class="time__day">14</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS performed at the <i>Korea-France Friendship concert</i> in Paris, a summit meant to show the
+                friendly
+                relations of France and South Korea.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-10-18">
+                <span class="time__day">18</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS renewed their contract with Big Hit. According to the email sent to the company employees and
+                stakeholders,
+                the contract is 7 years in length</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-10-21">
+                <span class="time__day">21</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>RM released his mixtape titled <i>mono</i> on digital and streaming platforms for free, alongside a
+                music video
+                for its final track <i>forever rain</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-11-06">
+                <span class="time__day">06</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS performed with Charlie Puth at the <i>MBC x Genie Music Awards</i>, taking home 11 awards including
+                <i>Album
+                  of the Year</i> and <i>Artist of the Year</i>.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-11-09">
+                <span class="time__day">09</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS became the 1st Korean album to be certified <i>Gold</i>(500,000+ units) as well as
+                <i>Platinum</i>(1,000,000+
+                units) with their single <i>Mic Drop</i>.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-11-15">
+                <span class="time__day">15</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p><i>Burn the Stage: The Movie</i> was released worldwide. The movie accumulated $1.2 million on opening
+                day and
+                $3.4 million over the weekend, breaking the record for highest grossing event cinema musical production
+                previously
+                set in 2014 by One Direction. It also ranked 10th in the box office deposit despite only being shown at
+                620
+                locations.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-11-28">
+                <span class="time__day">28</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS won <i>Artist of the Year</i> as well as <i>Popularity Award</i> at the <i>3rd Asia Artist
+                  Awards</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-12-01">
+                <span class="time__day">01</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS won 7 awards at the <i>Melon Music Awards</i> including <i>Album of the Year</i> with <i>Love
+                  Yourself:
+                  Tear</i> and <i>Artist of the Year</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-12-04">
+                <span class="time__day">04</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Billboard reported that BTS ranked 8th in their year-end Top-artist chart and ranked 2nd act of the
+                year in the
+                Duo/Group category. They also made Bloomberg 50 for their willingness to talk about mental health,
+                social issues,
+                etc.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-12-07">
+                <span class="time__day">07</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>It was announced that BTS' album <i>Love Yourself: Tear</i> had been nominated for a Grammy award for
+                <i>Best
+                  Recording Package</i>.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2018-12-14">
+                <span class="time__day">14</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS won 10 awards at the <i>Mnet Asian Music Awards</i> including <i>Album if the Year</i> and
+                <i>Artist of the
+                  Year</i>, marking it as their 3rd year in a row winning <i>Artist of the Year</i>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">2019</span>
+        <div class="timeline__cards">
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-02-11">
+                <span class="time__day">11</span>
+                <span class="time__month">Feb</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS attended the <i>61st Grammy Awards</i> as presenters.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-04-12">
+                <span class="time__day">12</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS became the 1st Asian act to surpass 5 billion streams on <i>Spotify</i>. They also released their
+                6th EP
+                titled <i>Map of the Soul: Persona</i> with the lead single <i>Boy With Luv</i> featuring Halsey,
+                debuting at #8
+                on the <i>Billboard Hot 100</i>, the highest in history for a Korean group. Its music video became the
+                most-viewed
+                online video within 24 hours, accumulating aroud 74.6 million views.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-05-04">
+                <span class="time__day">04</span>
+                <span class="time__month">May</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS started their stadium world tour extension, <i>Love Yourself: Speak Yourself</i> with venues
+                including
+                Wembley Stadium, Stade de France, Metlife Stadium, Rose Bowl and Soldier Field while also guesting at
+                various
+                talkshows and performing on Good Morning America.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-06-07">
+                <span class="time__day">07</span>
+                <span class="time__month">June</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released 3 collaboration singles: <i>Dream Glow feat. Charli XCX</i>, <i>A Brand New Day feat. Zara
+                  Larsson</i>, and <i>All Night feat. Juice WRLD</i> over the course of 3 weeks for their game BTS
+                World. They
+                also released a single titled <i>Heartbeat</i> along with a music video. The game was released on June
+                26.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-07-03">
+                <span class="time__day">03</span>
+                <span class="time__month">July</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released their tenth Japanese single 4th original Japanese song titled <i>Lights</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-08-08">
+                <span class="time__day">08</span>
+                <span class="time__month">Aug</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p><i>Love Yourself: Her</i> and <i>Love Yourself: Tear</i> sold 2 million copies in South Korea, making
+                all three
+                of the <i>Love Yourself</i> series sell more than 2 million copies in South Korea.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-08-11">
+                <span class="time__day">11</span>
+                <span class="time__month">Aug</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Big Hit announced that BTS will be having an official period of rest for the first time since their
+                debut in
+                2013.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-10-11">
+                <span class="time__day">11</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS performed at <i>King Fahd international Stadium</i> in Riyadh, Saudi Arabia, becoming the first
+                foreign act
+                to perform a solo concert in Saudi Arabia.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-11-24">
+                <span class="time__day">24</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS became the first K-pop group to win the awards <i>Favorite Duo or Group-Pop/Rock</i> and
+                <i>Favorite Social
+                  Artist</i> 2 years in a row at the <i>American Music Awards</i>.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-12-04">
+                <span class="time__day">04</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS ranked as the 4th most successful group on <i>Billboard's Top 200 Artists-Duo/Group</i>, only
+                behind
+                <i>Queen</i>, <i>Imagine Dragons</i>, and <i>The Beatles</i>.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-12-05">
+                <span class="time__day">05</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS became the first artist in the history of K-pop to receive all grand prizes from both the <i>Melon
+                  Music
+                  Awards</i> and <i>Mnet Asian Music Awards</i>, getting four from each award show.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2019-12-31">
+                <span class="time__day">31</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS performed in New York City's <i>Times Square</i> for <i>ABC's Dick Clark's New Year's Rockin'
+                  Eve</i>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">2020</span>
+        <div class="timeline__cards">
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-01-05">
+                <span class="time__day">05</span>
+                <span class="time__month">Jan</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS attended the <i>Golden Disc Awards</i> and became the first artist in history to win grand prizes
+                in both physical and digital categories.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-01-07">
+                <span class="time__day">07</span>
+                <span class="time__month">Jan</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Big Hit announced that BTS will release their fourth Korean-language studio album <i>Map of the Soul:
+                  7</i> on February 21 with two singles.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-01-10">
+                <span class="time__day">10</span>
+                <span class="time__month">Jan</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released a trailer for the album featuring Suga's solo track <i>Interlude: Shadow</i></p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-01-17">
+                <span class="time__day">17</span>
+                <span class="time__month">Jan</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released the single <i>Black Swan</i> along with a choreography art film performed by <i>MN Dance
+                  Company</i> based in Slovenia.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-01-21">
+                <span class="time__day">21</span>
+                <span class="time__month">Jan</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Big Hit announced BTS' fourth worldwide concert tour, <i>BTS Map of the Soul Tour</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-01-26">
+                <span class="time__day">26</span>
+                <span class="time__month">Jan</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS performed at the <i>62nd Annual Grammy Awards</i> with <i>Lil Nas X, Billy Ray Cyrus, Diplo,</i>
+                and more, making them the first Korean act to perform at the award show.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-02-21">
+                <span class="time__day">21</span>
+                <span class="time__month">Feb</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS album <i>Map of the Soul: 7</i> was released worldwide with the title track <i>ON</i> along with an
+                alternative track featuring Australian sing Sia.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-03-01">
+                <span class="time__day">01</span>
+                <span class="time__month">March</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Nine days after its release, <i>Map of the Soul: 7</i> sold 4.7 million copies, surpassing the record
+                set by <i>Map of the Soul: Persona</i> to become the best-selling album in South Korean history and the
+                first album to be certified <i>Quadruple Million</i> by the <i>Korea Music Content Association</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-04-10">
+                <span class="time__day">10</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS became the first South Korean artist to sell more than 20 million albums cumulatively, making them
+                the best-selling artist in South Korean history.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-04-11">
+                <span class="time__day">11</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS were set to embark on their tour but due to the Corona Virus Outbreak, the concert dates in Seoul
+                were cancelled, and after postponing the tour, it was eventually cancelled.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-04-19">
+                <span class="time__day">19</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS held a two-day online concert streaming event titled <i>Bang Bang Con</i> where they shared footage
+                of their past concerts.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-06-07">
+                <span class="time__day">07</span>
+                <span class="time__month">June</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS headlined YouTube's <i>Dear Class of 2020</i> online graduation event, giving a speech and
+                performing their songs <i>Boy With Luv</i>, <i>Spring Day</i>, and <i>Mikrokosmos</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-06-14">
+                <span class="time__day">14</span>
+                <span class="time__month">June</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Big Hit partnered with a live streaming solution in the US <i>Kiswe</i> to hold a 100-minute long live
+                concert
+                <i>Bang Bang Con: The Live</i> as part of BTS' seventh debut anniversary festivities, garnering 760,000
+                concurrent
+                viewers in 107 countries & territories. With this, BTS set the record for the largest audience for a
+                paid virtual
+                concert.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-06-19">
+                <span class="time__day">19</span>
+                <span class="time__month">June</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released a Japanese single titled <i>Stay Gold</i> from their fourth Japanese studio album <i>Map
+                  of the
+                  Soul:7-The Journey</i> that was set to be released on July 14.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-07-14">
+                <span class="time__day">07</span>
+                <span class="time__month">June</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released their fourth studio album titled <i>Map of the Soul:7-The Journey</i>. The album surpassed
+                564,000
+                copies in its first week, breaking the 10-year record of TVXQ's <i>Best Selection</i> in 2010 for the
+                highest forst
+                week album sales by a male foreign artist in Japan.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-08-21">
+                <span class="time__day">21</span>
+                <span class="time__month">Aug</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released their first English-language single, Dynamite. The single debuted at #1 on the US
+                <i>Billboard Hot
+                  100</i> chart becoming the fastest-selling single after Taylor Swift's <i>Look What You Made Me
+                  Do</i>, earning BTS
+                their first chart topper and making them the first all-South Korean act (second Asian act overall) to
+                earn a #1 single
+                in the US.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-08-31">
+                <span class="time__day">31</span>
+                <span class="time__month">Aug</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS made their <i>MTV Video Music Awards (VMAs)</i> debut with the first live performance of
+                <i>Dynamite</i>, and won
+                <i>Best Group</i>, <i>Best Choreography</i>, <i>Best Pop Video</i>, and <i>Best K-pop</i>, with the last
+                3 awards being
+                for their music video for <i>ON</i>.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-09-28">
+                <span class="time__day">28</span>
+                <span class="time__month">Sept</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p><i>Dynamite</i> reached #1 on Billboard's <i>Global 200</i> and <i>Global Excluding US</i> charts,
+                becoming the first
+                single to top both simultaneously.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-10-02">
+                <span class="time__day">04</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released a remix of <i>Savage Love</i>. It topped the <i>Billboard Hot 100</i> chart, marking the
+                group's second
+                number one entry. <i>Dynamite</i> Remained at #2, making BTS the 4th group to simultaneously hold the
+                top 2 spots on
+                the Hot 100.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-10-05">
+                <span class="time__day">05</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p><i>Dynamite</i> spent its sixth xonsecutive week at #1 on the <i>Digital Song Sales</i> chart and rose
+                to the 39th
+                spot on the <i>Radio Songs</i> chart, becoming their first Top 40 entry on US's overall radio chart.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-10-10">
+                <span class="time__day">10</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>The group held an online pay-per-view concert called <i>Map of The Soul ON:E</i>for 2 days, which broke
+                their own
+                world record for most viewers for a paid virtual concert live stream.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-10-12">
+                <span class="time__day">12</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>The single <i>Savage Love</i>remix topped the <i>Billboard Global 200</i>, becoming their second number
+                1 entry and
+                making BTS the first artist to have multiple songs top Billboard's recently created global singles
+                chart.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-10-31">
+                <span class="time__day">31</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They re-released their 2014 album <i>Skool Luv Affair</i> debuting in the top 10 of <i>Billboards Rap
+                  Albums</i>
+                chart and becoming their first entry on the genre-specific chart.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-11-03">
+                <span class="time__day">03</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Suga underwent surgery to repair his torn shoulder.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-11-20">
+                <span class="time__day">20</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS' fifth Korean studio album <i>BE</i> was released, with <i>Life Goes On</i> as its lead single.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-11-24">
+                <span class="time__day">24</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS became the first Korean pop artists to be recognized by the Recording Academy when <i>Dynamite</i>
+                received a
+                nomination for Best Pop/Duo performance at the <i>63rd Annual Grammy Awards</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-11-30">
+                <span class="time__day">30</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p><i>Life Goes On</i> debuted at #1 on the <i>Billboard Hot 100</i> chart, achieving their 3rd
+                consecutive #1 in just 3
+                months. The fastest of any band since the Beatles in 1964 to do so and became the first group in the
+                chart's history
+                to have 2 number one debuts as well as seven songs appearing on the chart, <i>Life Goes On</i> became
+                the first song
+                performed primarily in Korea to debut in the top spot.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-12-02">
+                <span class="time__day">02</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>At the 2020 <i>Melon Music Awards</i>, BTS won the most awards, having won 6 awards, including 3
+                daesangs and 1
+                bonsang.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-12-06">
+                <span class="time__day">06</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS won 9 awards, which includes the 4 major grand prizes (Artist of the Year, Song of the Year, Album
+                of the Year,
+                Worldwide leon of the Year).</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2020-12-30">
+                <span class="time__day">30</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS won <i>Special International Music</i> Award at the 62nd <i>Japan Record Awards</i>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">2021</span>
+        <div class="timeline__cards">
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-03-04">
+                <span class="time__day">04</span>
+                <span class="time__month">March</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>The <i>International Federeation of the Phonographic Industry</i>(IFPI) named BTS its <i>Global
+                  Recording Artist of the Year</i> for 2020, becoming the first Asian and first non-English speaking act
+                to top the ranking.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-03-14">
+                <span class="time__day">14</span>
+                <span class="time__month">March</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS performed <i>Dynamite</i> at the <i>63rd Annual Grammy Awards</i>, becoming the first Korean
+                nominee to perform
+                their own song on the show.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-04-01">
+                <span class="time__day">01</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS released <i>Film Out</i>, the lead single for their Japanese compilation album. To be released on
+                June 16, 2021.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-04-17">
+                <span class="time__day">17</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS held another event on their Youtube channel titled <i>Bang Bang Con 21</i>, containing footage of
+                three of their
+                previous in-person concerts.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-04-26">
+                <span class="time__day">26</span>
+                <span class="time__month">April</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>It was revealed thet they were releasing their second English-language single <i>Butter</i> to be
+                released on May 21.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-05-21">
+                <span class="time__day">21</span>
+                <span class="time__month">May</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p><i>Butter</i> debuted at #1 on the US <i>Billboard Hot 100</i> chart, making the group's fourth #1 in
+                the last 9
+                months. This makes BTS the quickest act to reach four #1s since Justin Timberlake in 2006 and the
+                fastest group to
+                score four number ones since the Jackson 5 in 1970.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-06-16">
+                <span class="time__day">16</span>
+                <span class="time__month">June</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their Japanese compilation album titled <i>BTS, the Best</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-07-09">
+                <span class="time__day">09</span>
+                <span class="time__month">July</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They released their third English-language single <i>Permission to Dance</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-07-19">
+                <span class="time__day">19</span>
+                <span class="time__month">July</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>According to <i>Digital Songs Chart</i>, the single BTS eighth number one, extending the record as the
+                group with
+                most number one hits on the chart.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-09-14">
+                <span class="time__day">14</span>
+                <span class="time__month">Sept</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS was appointed as <i>Special Presidential Envoy for Future Generations and Culture</i>. They are to
+                accompany the
+                South korean president on Sept 19-23 in the United States.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-09-15">
+                <span class="time__day">15</span>
+                <span class="time__month">Sept</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>They announced that their <i>Permission to Dance on Stage</i> online concert will be held in October.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-09-20">
+                <span class="time__day">20</span>
+                <span class="time__month">Sept</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS spoke at the <i>United Nations General Assembly 2021</i> and performed their single <i>Permission
+                  to Dance</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-09-24">
+                <span class="time__day">24</span>
+                <span class="time__month">Sept</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS featured on Coldplay's single <i>My Universe</i>.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-10-04">
+                <span class="time__day">04</span>
+                <span class="time__month">Oct</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>Billboard announced that <i>My Universe</i> debuted at number one on <i>Billboard Hot 100</i>, making
+                it the first
+                collaborative track in history to debut at number one with two lead groups.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-11-21">
+                <span class="time__day">21</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS won <i>Artist of the Year</i> at the <i>American Music Awards</i>, the first Korean act to do so.
+                They also
+                performed <i>Butter</i> and <i>My Universe</i> alongside Coldplay.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-11-23">
+                <span class="time__day">23</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS' <i>Butter</i> earned a Grammy nomination for <i>Best Pop Duo/Group</i> performance at the <i>64th
+                  Annual Grammy
+                  Awards</i></p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-11-27">
+                <span class="time__day">27</span>
+                <span class="time__month">Nov</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS performed at their concert before taking a rest on December 2.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2021-12-06">
+                <span class="time__day">06</span>
+                <span class="time__month">Dec</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS opened their individual instagram accounts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="timeline__group">
+        <span class="timeline__year time" aria-hidden="true">2022</span>
+        <div class="timeline__cards">
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2022-01-15">
+                <span class="time__day">15</span>
+                <span class="time__month">Jan</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>A new fictional webtoon based on BTS titled <i>7 Fates:Chakho</i> was released.</p>
+            </div>
+          </div>
+          <div class="timeline__card card">
+            <header class="card__header">
+              <time class="time" datetime="2022-02-16">
+                <span class="time__day">16</span>
+                <span class="time__month">Feb</span>
+              </time>
+            </header>
+            <div class="card__content">
+              <p>BTS announced plans for a live global video concert in March, and a return to several live stage
+                performance and
+                concerts in South Korea also planned for March.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <script>
+        window.addEventListener('click', () => {
+          document.getElementById("Audio").play();
+        });
+
+
+        function myFunction() {
+          var x = document.getElementById("Audio").loop;
+          document.getElementById("demo").innerHTML = x;
+        }
+
+        var audio = document.getElementById("Audio");
+        audio.volume = 0.2;
+      </script>
+      
+      <script
+        type="text/javascript">(function () { window['__CF$cv$params'] = { r: '6dab4fd14e198e45', m: 'egNrmm0kVqQgqOG2CfH2sMUvnZ55cd092tuw8aA9GL0-1644390981-0-Aex4ECTkUPyPqT3gTNnsynrIVa7732LCY7cuDlDjkjO0QOGUVRrejnGKpeEQ0uvwO/7J1A54SZ5A0CZPbRrsq+X5iFEP3Ct1zzr/iJGpBNeNftOtxh25eaKCSWmpiWGlhZnNksnXVQMq2M9/nn6XgwFuP4VsifND5JVZja0ob1Y9Dm3Tln8r4niRjn9zz4/bNg==', s: [0xa8f65dc841, 0x4b342f1c99], } })();</script>
+      <script
+        type="text/javascript">(function () { window['__CF$cv$params'] = { r: '6dac873fefb5463d', m: '774sjfX7AhgDN.9MCTbqUFga2lcAE9gAWaIt1DHS03E-1644403738-0-AUcXUET07TR5VWJ+RA3CHiys6SxrwSG86VgxO7/tZlO9UJGn0lSU6JNymsmI8jAJ0hAQTVkBZheMsORyKnC4Cd03tQHCmQrfrNjr4U0QiXVCBG8KG5swk88H09lHCljdqe/J+bLMlZDJlqpLRT0hUEDyNVm/lgc4dYP2e9GRKZ2n6V57xZ2/QSsOdUXy7YsBHB2kli87EiM6/UNhXtcmNdo=', s: [0x3d58adf7fb, 0xdf3ca89a8a], } })();</script>
+      </body>
+
+      <footer>
+        <div class="social">
+          <ul>
+            <li><a href="https://www.instagram.com/bts.bighitofficial/?hl=en"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://open.spotify.com/artist/3Nrfpe0tUJi4K4DXYWgMUX"><i class="fa fa-spotify"></i></a></li>
+            <li><a href="https://twitter.com/bts_twt"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UCLkAepWjdylmXSltofFvsYQ"><i class="fa fa-youtube-play"></i></a></li>
+            <li><a href="https://soundcloud.com/bangtan"><i class="fa fa-soundcloud"></i></a></li>
+          </ul>
+        </div>
+      </footer>
+      </html>

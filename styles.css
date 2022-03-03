@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.centerButton{
+ margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+#homepage {
+  width: 200px;
+  height: 75px;
+  font-family: 'Inria Serif';
+  font-size: 35px;
+  padding: 10px;
+  border: none;
+border-radius: 10px;
+  background: #b666d2;
+  color:  #050404;
+  cursor: pointer;
+
+}
+#homepage:hover {
+  background:  #e1a3ff;
+  color:  #050404;
+  border: 3px solid #ffffff;
+
+}
+
+body {
+background-image: 'bangtanconcert.jpg';
+}
+
+
