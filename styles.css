@@ -51,4 +51,11 @@ body {
 background-image: 'bangtanconcert.jpg';
 }
 
+@media only screen and (min-width: 200px) and (max-width: 1300px) {
+  .responsive {
+    /*width: 49.5%;*/ 
+    width: 100%;    /*from below (double)*/
+    margin: 10px 0;
+  }
+}
 
